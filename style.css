@@ -1,0 +1,484 @@
+::-webkit-scrollbar {
+    width: 8px; /* width of the scrollbar */
+}
+
+::-webkit-scrollbar-track {
+    background: none; /* color of the track */
+}
+
+::-webkit-scrollbar-thumb {
+    background: #202020; /* color of the scrollbar thumb */
+    border-radius: 20px;
+}
+*{
+    margin: 0px;
+    padding: 0px;
+    color: white;
+    font-family: sans-serif;
+}
+body{
+    height: 100vh;
+    width: 100vw;
+    position: fixed;
+    overflow: hidden;
+    background-color: black;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* align-items: center; */
+    
+}
+.hero{
+    position: relative;
+    width: 100%;
+    border: none;
+    display: flex;
+    justify-content: space-evenly;
+    margin:  10px 0px;
+    height: calc(100vh - 70px);
+    
+}
+.sideblock{
+    border-radius: 10px;
+    background-color: rgb(0, 0, 0);
+    height: 100%;
+    width: 25vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: left 2s ease;
+    
+}
+.sideblock .box1{
+  
+
+    border-radius: 10px;
+    background-color: rgb(20, 19, 19);
+    height: 30%;
+
+}
+.sideblock .box1 ul{
+    margin-left: 20px;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.sideblock .box1 ul:first-child img{
+    width: 100px;
+}
+.sideblock .box1 ul li{
+   
+    height: 30px;
+    width: 30px;
+    list-style: none;
+}
+.sideblock .box1 h3{
+    margin-left: 20px;
+    margin-top: 5px;
+}
+
+
+.sideblock .box2 .library {
+    
+    position: absolute;
+    top:0;
+    width: 100%;
+    height: 80%;
+    flex-direction: column;
+    justify-content: center;
+}
+.sideblock .box2 .library .librarycontent{
+    position: absolute;
+    top:0;
+    left: 6.5%;
+    height: 100%;
+    width: 87%;
+    margin:  10px auto;
+    justify-content: space-between;
+    align-items: start;
+}
+.sideblock .box2 .library .logoh {
+    justify-content: space-between;
+}
+
+.plogo img{
+    height: 30px;
+}
+.sideblock .box2 h3{
+    margin-left: 20px;
+    margin-top: 5px;
+    width: 100%;
+}
+.sideblock .box2{
+    position: relative;
+    border-radius: 10px;
+    background-color: rgb(20, 19, 19);
+    height: 68%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.sideblock .box2 .songnames{
+    height: 90%;
+    /* width: 100%; */
+    position: absolute;
+    top: 20%;
+    overflow: auto;
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+
+}
+.sideblock .box2 .songnames li{
+    cursor: pointer;  
+    display: flex;
+    justify-content: space-between;
+    width: 80%;
+    margin: 5px auto;
+    list-style: none;
+    border: 1.5px solid white;
+    border-radius: 10px;
+    padding: 8px
+
+}
+.sideblock .box2 .songnames li .attributes{
+    height: 70%;
+    /* text-overflow: ellipsis; */
+    margin : auto 0px;
+    width: 50%;
+}
+
+.sideblock .box2 .links{
+    height: 10%;
+    /* background-color: black; */
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    bottom: 0px;
+    left: 6.5%;
+    right: 6.5%;
+    border-bottom-right-radius: 10px ;
+    border-bottom-left-radius: 10px;
+    /* z-index: 10; */
+    width: 100%;
+    align-items: start;
+    
+}
+
+.sideblock .box2 .links ul{
+    display: flex;
+}
+.sideblock .box2 .links li{
+    cursor: pointer;
+    list-style: none;
+    font-size: 13px;
+    margin-right: 10px;
+}
+.main{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 10px;
+    background-color: rgb(20, 19, 19);
+    width: 73vw;
+    overflow: auto;
+}
+.main .pane{
+    border-top-right-radius: 10px;
+    border-top-left-radius: 10px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 55px;
+    position: sticky;
+    z-index: 2;
+    top: -5px;
+    background-color: rgba(0, 0, 0, 0.724);
+}
+.main .pane .panecontent{
+    width: 95%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 80%;
+}
+.panecontent .arrows{
+    display: flex;
+}
+
+
+.ar{
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 6px;
+    height: 30px;
+    width: 30px;
+    border-radius: 100px;
+    background-color: black;
+}
+.arr1{
+    transform: rotate(180deg);
+}
+.ls{
+    height: 100%;
+}
+.ls button{
+    font-size: larger;
+    font-weight: bolder;
+    margin: auto 5px;
+    width: 100px;
+    height: 100%;
+    border-radius: 50px;
+    background: none;
+}
+.ls .login{
+    background-color: white;
+    color: black;
+    border: 2px solid white;
+}
+.ls .signup{
+    border: none;
+
+}
+.main .playlists{
+    position: absolute;
+    width: 95%;
+    top:50px;
+    display: flex;
+    flex-direction: column;
+    /* align-items: center; */
+    overflow: auto;   
+}
+
+.main .playlistshead{
+    font-weight: 600;
+    margin-top: 20px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+.playlistshead .right{
+    font-size: 25px;
+}
+.playlistshead .left{
+    font-size: 20px;
+}
+.main .playlistsboxes{
+    margin-top: 20px;
+    /* display: inline; */
+ 
+    overflow: auto;
+}
+.main .playlistsboxes .box{
+    position: relative;
+    margin: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    padding: 15px;
+    height: 240px;
+    width: 140px;
+    border-radius: 10px;
+    background-color: rgb(44, 44, 44);
+}
+.main .playlistsboxes .box .play {
+    position: absolute;
+    top: 130px;
+    right: 15px;
+    opacity: 0;
+}
+
+.main .playlistsboxes .box:hover .play {
+    transform: translateY(-22px); 
+    opacity: 1;
+    transition:  opacity 0.3s ease, transform 0.3s ease-in-out; 
+    
+    
+}
+.main .playlistsboxes .box>p{
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+
+}
+
+.playlistsboxes .box .img{
+    height: 60%;
+    width: calc(100%-15px);
+}
+.playlistsboxes .box .img img {
+        width: 100%;
+        border-radius: 10px;
+        height: 100%; /* Set the height to 100% to cover the full height of the container */
+        object-fit: cover; /* Use "cover" to make sure the image covers the container */
+}
+.playbar{
+    display: flex;
+    height: 70px;
+    width: 100%;
+    position: absolute;
+    z-index: 2;
+    bottom: 0;
+}
+.playbar .left{
+    width: 330px;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+.playbar .left img{
+    height: 50px;
+    width: 100px;
+    /* object-fit: cover; */
+}
+.playbar .left .attributes1{
+    width: 73%;
+    display: flex;
+    flex-direction: column;
+
+}
+.playbar .center{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 350px;
+    height: 90%;
+}
+.playbar .center .controls{
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    height: 100%;
+}
+.playbar .center .playcontrols{
+    justify-content: center;
+
+}
+.playbar .center .seekbar{
+position: absolute;
+bottom: 0px;
+ height: 2px;
+ width: 100%;
+ background-color: white;
+ align-items: center;
+}
+.playbar .center .seekbar .fillbar{
+    height: 100%;
+    width: 0%;
+    background-color: rgb(62, 62, 62);
+    transition: width 0.5s ease
+}
+.playbar .center .seekbar .circle{
+    position: absolute;
+    background-color: rgb(62, 62, 62);
+    height: 10px;
+    width: 10px;
+    border-radius: 13px;
+    left: -1%;
+    transition: left 0.5s ease
+}
+.volbutton{
+    height: 100%;
+    width: 100%;
+}
+.media{
+    margin: 21px 0px;
+}
+.media .volrange{
+    position: absolute;
+    transform: rotate(-90deg);
+    top: -60px;
+    right: -50px;
+
+    opacity: 0;
+
+}
+.volumepack .volrange{
+    position: absolute;
+    transform: rotate(-90deg);
+    top: -70px;
+    right: 45px;
+
+    opacity: 0;
+
+}
+.volbutton:hover + .volrange,
+.volrange:hover {
+    opacity: 1;
+}
+
+
+
+@media (max-width: 1100px) {
+    .sideblock .box2 .links {
+        display: none;
+    }
+    .hero{
+        justify-content: center;
+        height: calc(100vh - 140px);
+        margin: 0px;
+        
+    }
+    .sideblock {
+        position: absolute;
+        left: -100%;   
+        transition: left 2s ease;
+        height: calc(100vh - 195px);
+        top: 55px;
+    }
+    .main {
+        width: 98vw;
+        /* position: relative; */
+        /* margin: auto; */
+    }
+    .hamburger{
+        display: inline-flex;
+    }
+    .playbar{
+        /* background-color: aqua; */
+        height: 140px;
+        display: flex  ;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        margin-bottom: 9px;
+    }
+
+    .playbar .right{
+        display: none;
+    }
+    .playlistsboxes{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+    
+}
+@media (min-width: 1100px) {
+    .playcontrols{
+        margin: 0px auto;
+    }
+    .media{
+        display: none;
+    }
+    .playbar{
+
+        
+        justify-content: space-between;
+    }
+    .playlistsboxes{
+        display: flex;
+        
+    }
+    .hamburger{
+        display: none;
+    }
+
+}
+

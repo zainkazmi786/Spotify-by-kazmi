@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="utilities.css">
+</head>
+
+<body> 
+    <div class="hero">
+        <div class="sideblock">
+            <div class="box1 flex">
+                <ul class="flex">
+                    <li><img width="400" class="invert" src="svgs/logo.svg" alt="logo"></li>
+                    <li class="flex"><img class="invert" src="svgs/home.svg" alt="">
+                        <h3>Home</h3>
+                    </li>
+                    <li class="flex"><img class="invert" src="svgs/search.svg" alt="">
+                        <h3>Search</h3>
+                    </li>
+                </ul>
+
+            </div>
+            <div class="box2">
+                <div class="library flex">
+                    <div class="librarycontent flex">
+
+                        <div class="logoh flex">
+                            <div class="plogo"><img class="invert" src="svgs/playlist.svg" alt="logo">
+                            </div>
+                            <h3>Your Library</h3>
+                        </div>
+                        <h1>+</h1>
+                    </div>
+                    <ul class="songnames margin flex">
+                        
+                    </ul>
+                </div>
+                <div class="links">
+                    <ul>
+                        <li><a>Legal</a></li>
+                        <li><a>Privacy Center</a></li>
+                        <li><a>Privacy Policy</a></li>
+                    </ul>
+                    <ul>
+                        <li><a>Cookies</a></li>
+                        <li><a>About Ads</a></li>
+                        <li><a>Accessibility</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="main">
+            <div class="pane">
+                <div class="panecontent">
+                    <div class="arrows">
+                        <img id="hamburger" class="invert hamburger" src="svgs/hamburger.svg" alt="">
+                        <div class="arr2 ar"><img class="invert" src="svgs/arrowleft.svg" alt=""></div>
+                        <div class="arr1 ar"><img class="invert" src="svgs/arrowleft.svg" alt=""></div>
+                    </div>
+                    <div class="ls">
+                        <button class="signup">Sign Up</button>
+                        <button class="login">Log In </button>
+                    </div>
+                </div>
+            </div>
+            <div class="playlists">
+                <div class="playlistshead">
+                    <div class="right">Spotify Playlists</div>
+                    <div class="left">Show all</div>
+                </div>
+                <div class="playlistsboxes">
+                    <!-- <div data-folder="music1" class="box">
+                        <img class="play" src="svgs/play.svg" alt="">
+                        <div class="img"><img src="images/1.jpg" alt=""></div>
+                        <h3>lofi beats</h3>
+                        <p>Lorem ipsum dolor sit amet consectetur jnadebcbie jncdbvujbeoibdujvjdn !</p>
+                    </div>
+                    <div data-folder="music2" class="box">
+                        <img class="play" src="svgs/play.svg" alt="">
+                        <div class="img"><img src="images/2.jpg" alt=""></div>
+                        <h3>Chill out</h3>
+                        <p>Lorem ipsum dolor sit amet consectetur jnadebcbie jncdbvujbeoibdujvjdn !</p>
+                    </div>
+                    <div class="box">
+                        <img class="play" src="svgs/play.svg" alt="">
+                        <div class="img"><img src="images/3.jpg" alt=""></div>
+                        <h3>Todays Top Hits</h3>
+                        <p>Lorem ipsum dolor sit amet consectetur jnadebcbie jncdbvujbeoibdujvjd!</p>
+                    </div>
+                    <div class="box">
+                        <img class="play" src="svgs/play.svg" alt="">
+                        <div class="img"><img src="images/4.jpg" alt=""></div>
+                        <h3>All Out 2024</h3>
+                        <p>Lorem ipsum dolor sit amet consectetur jnadebcbie jncdbvujbeoibdujvjdn !</p>
+                    </div> -->
+                </div>
+                <div class="playlistshead">
+                    <div class="right">Your Playlists</div>
+                    <div class="left">Show all</div>
+                </div>
+                <div class="playlistsboxes">
+                    <div class="box"></div>
+                    <div class="box"></div>
+                    <div class="box"></div>
+                    <div class="box"></div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <div class="playbar">
+        <div class="left margin">
+            <img class="invert" src="svgs/music.svg" alt="">
+            <div class="attributes1">
+                <h4 class="ellipses"></h4>
+                <p></p>
+            </div>
+        </div>
+        <div class="center">
+            
+            <div class="controls">
+                <img class="invert media" src="svgs/playlist2.svg" alt="">
+                <div class="playcontrols flex margin">
+
+                    <img id="previous" class= "pointer" src="svgs/prev.svg" alt="">
+                    <img id="play" class= "pointer invert" src="svgs/play2.svg" alt="">
+                    <img id="next" class="pointer rotate" src="svgs/prev.svg" alt="">
+                </div>
+                <div class="media">
+                    <img class="invert volbutton" src="svgs/volume.svg" alt="">
+                    <input class="volrange" type="range" name="volume" id="">
+
+                </div>
+            </div>
+            <div class="seekbar flex pointer">
+                <div class="circle"></div>
+                <div class="fillbar"></div>
+            </div>
+            
+        </div>
+        <div class="right flex margin">
+            <img class="invert" src="svgs/queue.svg" alt="">
+            <img class="invert" src="svgs/playlist2.svg" alt="">
+            <div class="volumepack">
+                <img class="invert volbutton" src="svgs/volume.svg" alt="">
+                <input type="range" id="volumeControl" min="0" max="1" step="0.1" value="1" class="volrange">
+
+
+            </div>
+            <img class="invert" src="svgs/devices.svg" alt="">
+
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,20 @@
+.flex{
+    display: flex;
+}
+.invert{
+    filter: invert(1);
+}
+.rotate{
+    transform: rotate(180deg);
+}
+.margin > *{
+    margin:10px;
+}
+.ellipses{
+    white-space: nowrap; /* Prevent text from wrapping */
+    overflow: hidden; /* Hide any overflowing text */
+    text-overflow: ellipsis;
+}
+.pointer{
+    cursor:pointer;
+}
