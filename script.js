@@ -7,7 +7,8 @@ let circle = document.querySelector(".circle")
 let seekbar = document.querySelector(".seekbar")
 let fillbar = document.querySelector(".fillbar")
 let hamburger = document.getElementById("hamburger")
-const volumeControl = document.getElementById('volumeControl');
+let volume_buttons = document.querySelectorAll(".volbutton")
+const volumeControl = document.getElementsByClassName('volrange');
 let currfolder;
 
 let playlistsboxes = document.querySelector(".playlistsboxes")
@@ -141,7 +142,7 @@ async function main() {
 
             // Create an empty array to store <h4> elements
 
-
+            h4Elements = []
 
             // Loop through each <li> element
             liElements.forEach(li => {
@@ -160,15 +161,10 @@ async function main() {
                 })
             })
             
-           
+           playMusic(h4Elements[0].innerHTML ,currfolder)
         })
 
-        h4Elements.forEach(e => {
-            e.addEventListener("click", () => {
-                playMusic(e.innerHTML, currfolder)
-            })
-    
-        })
+
     })
 
      //default music on reload
@@ -180,12 +176,15 @@ async function main() {
 
     // current.pause();
     // play.src = "svgs/play2.svg"
-    volumeControl.addEventListener('input', function () {
-        // Convert the range value to a float between 0 and 1
-        const volumeValue = parseFloat(this.value);
-        // Set the volume of the audio element
-        current.volume = volumeValue;
-    });
+    Array.from(volumeControl).forEach(e=>{
+
+        e.addEventListener('input', function () {
+            // Convert the range value to a float between 0 and 1
+            const volumeValue = parseFloat(this.value);
+            // Set the volume of the audio element
+            current.volume = volumeValue;
+        });
+    })
 
     //setting the play button
     play.addEventListener("click", () => {
@@ -289,7 +288,28 @@ async function main() {
         // Update the sideblock's state
         sideblockOpen = !sideblockOpen;
     });
+    let ismute = false
+Array.from(volume_buttons).forEach(e=>{
+    e.addEventListener("click", ()=>{
+        if(!ismute){
 
+            e.src = "svgs/volume.svg"
+            current.volume = 1
+            Array.from(volumeControl).forEach(e=>{
+                e.value = 1
+        })
+    }
+        else{
+            e.src = "svgs/mute.svg"
+            current.volume = 0
+            Array.from(volumeControl).forEach(e=>{
+                e.value = 0
+        })
+
+        }
+        ismute = !ismute
+    })
+})
 
 }
 main()
