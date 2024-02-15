@@ -22,7 +22,7 @@ let playlistsboxes = document.querySelector(".playlistsboxes")
 async function getsongs(foldername) {
     currfolder = foldername;
     let song;
-    let a = await fetch(`http://127.0.0.1:3000/songs/${foldername}/`)
+    let a = await fetch(`/songs/${foldername}/`)
     let response = await a.text()
     let div = document.createElement("div")
     div.innerHTML = response
@@ -82,7 +82,7 @@ function convertTimeFormat(timeString) {
     return `${formattedCurrentTime} / ${formattedDuration}`;
 }
 async function displayboxes(){
-    let box = await fetch(`http://127.0.0.1:3000/songs/`)
+    let box = await fetch(`/songs`)
     let response = await box.text()
     
     let div = document.createElement("div")
@@ -105,7 +105,7 @@ for (let index = 0; index < folders.length; index++) {
     new_box.classList.add("box");
     new_box.dataset.folder = element_updated
     new_box.innerHTML = `<img class="play" src="svgs/play.svg" alt="">
-    <div class="img"><img src="images/2.jpg" alt=""></div>
+    <div class="img"><img src="songs/${element_updated}/1.jpg" alt=""></div>
     <h3>${element_updated}</h3>
     <p>Lorem ipsum dolor sit amet consectetur jnadebcbie jncdbvujbeoibdujvjdn !</p>`
     playlistsboxes.appendChild(new_box)
@@ -169,9 +169,9 @@ async function main() {
 
      //default music on reload
             
-     current.src = `/songs/music1/` + "Hussain baant rahe hain nijat le jao..mp3"
-     document.querySelector(".attributes1").getElementsByTagName("h4")[0].innerText = "Hussain baant rahe hain nijat le jao..mp3"
-     document.getElementsByClassName("attributes1")[0].getElementsByTagName("p")[0].innerHTML = "00:00 / 00:00";
+    //  current.src = `/songs/music1/` + "Hussain baant rahe hain nijat le jao..mp3"
+    //  document.querySelector(".attributes1").getElementsByTagName("h4")[0].innerText = "Hussain baant rahe hain nijat le jao..mp3"
+    //  document.getElementsByClassName("attributes1")[0].getElementsByTagName("p")[0].innerHTML = "00:00 / 00:00";
 
 
     // current.pause();

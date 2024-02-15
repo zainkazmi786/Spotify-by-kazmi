@@ -423,7 +423,7 @@ bottom: 0px;
     }
     .hero{
         justify-content: center;
-        height: calc(100vh - 145px);
+        height: calc(100vh - 165px);
         margin: 0px;
         
     }
@@ -451,6 +451,14 @@ bottom: 0px;
         align-items: center;
         justify-content: center;
         margin-bottom: 9px;
+        width: 95vw;
+        bottom: 20px;
+    }
+    .playbar .center{
+        width: 100%;
+    }
+    .playbar .left{
+        width: 100%;
     }
 
     .playbar .right{
